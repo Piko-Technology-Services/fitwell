@@ -8,9 +8,14 @@
  * brand-gradient placeholder instead. class-* keys are used by the sample classes.
  */
 return [
-    'highfive'    => ['src' => '../assets/new-images/high-5.jpeg', 'alt' => 'A group of friends laughing and hugging together', 'credit' => 'Kaeme / Unsplash'],
-    'print-leg' => ['src' => '../assets/new-images/print-leg.jpeg', 'alt' => 'A smiling woman holding two orange kettlebells overhead', 'credit' => 'April Laugh / Unsplash'],
-    'green-shirt'    => ['src' => '../assets/new-images/green-shirt.png', 'alt' => 'A woman dancing with energy in a city alleyway', 'credit' => 'Rio Watkins / Unsplash'],
+    'highfive'    => ['src' => 'unsplash:1658092967527-4e140d9bdaea', 'alt' => 'A group of friends laughing and hugging together', 'credit' => 'Kaeme / Unsplash'],
+    'kneeling'    => ['src' => 'unsplash:1518622358385-8ea7d0794bf6', 'alt' => 'Three women smiling together on the studio floor between exercises', 'credit' => 'bruce mars / Unsplash'],
+    'pair'        => ['src' => 'unsplash:1628970937415-72e1677309c6', 'alt' => 'Two women in sportswear smiling and flexing together', 'credit' => 'April Laugh / Unsplash'],
+    'class-aerobics' => ['src' => 'unsplash:1635863807845-add1be925a2f', 'alt' => 'A smiling woman holding two orange kettlebells overhead', 'credit' => 'April Laugh / Unsplash'],
+    'class-dance'    => ['src' => 'unsplash:1593731137920-0d2ab1a3169d', 'alt' => 'A woman dancing with energy in a city alleyway', 'credit' => 'Rio Watkins / Unsplash'],
+    'class-group'    => ['src' => 'unsplash:1635863909116-5427cb7da155', 'alt' => 'Four women in colourful workout sets standing together', 'credit' => 'April Laugh / Unsplash'],
+    'class-lowimpact'=> ['src' => 'unsplash:1683111124427-650aff5592a8', 'alt' => 'Three people stretching together outdoors before a workout', 'credit' => 'Sweet Life / Unsplash'],
+    'class-special'  => ['src' => 'unsplash:1771402900038-785d2b4c39b0', 'alt' => 'A cheerful group of people at a fitness event', 'credit' => 'Ben Iwara / Unsplash'],
     'corporate-outdoor' => ['src' => null, 'alt' => 'Team sessions'],
     'coach'       => ['src' => null, 'alt' => 'Fitwell instructors'],
 ];
