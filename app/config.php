@@ -49,8 +49,8 @@ return [
         'address'    => null,   // studio street address
         'hours'      => null,   // e.g. 'Mon–Fri 05:30–20:00 · Sat 07:00–12:00'
         'corporate_email' => null, // optional dedicated corporate enquiries address
-        'whatsapp'   => '+260762186180',            // WhatsApp chat number (international format)
-        'whatsapp_display' => '+260 762 186 180',
+        'whatsapp'   => '+260766545627',            // WhatsApp chat number (international format)
+        'whatsapp_display' => '+260 766 545 627',
         'whatsapp_message' => "Hi Fitwell! I'd like to know more about your classes.",
     ],
 
@@ -93,18 +93,18 @@ return [
                 'Welcome session with an instructor',
             ],
         ],
-        [
-            'name'     => 'Class Pack',
-            'tagline'  => 'Flexible sessions on your schedule.',
-            'price'    => null,
-            'period'   => 'per pack',
-            'featured' => false,
-            'benefits' => [
-                'A set number of classes to use your way',
-                'Mix aerobics, dance and group fitness',
-                'Online booking and easy cancellation',
-            ],
-        ],
+        // [
+        //     'name'     => 'Class Pack',
+        //     'tagline'  => 'Flexible sessions on your schedule.',
+        //     'price'    => null,
+        //     'period'   => 'per pack',
+        //     'featured' => false,
+        //     'benefits' => [
+        //         'A set number of classes to use your way',
+        //         'Mix aerobics, dance and group fitness',
+        //         'Online booking and easy cancellation',
+        //     ],
+        // ],
     ],
 
     /* Class categories used for filters and admin */
@@ -113,6 +113,7 @@ return [
         'dance'         => 'Dance Fitness',
         'group-fitness' => 'Group Fitness',
         'special'       => 'Special Sessions',
+        'other'         => 'Other',
     ],
 
     /* Instructor profiles — add real people here when ready
