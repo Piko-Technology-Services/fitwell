@@ -188,7 +188,7 @@ require APP_DIR . '/partials/header.php';
       <a class="btn btn--light btn--lg" href="<?= url('corporate.php') ?>">Explore Corporate Wellness <?= icon('arrow') ?></a>
     </div>
     <div class="corp__media">
-      <figure data-reveal="img"><?= img('corporate', '(min-width: 900px) 44vw, 100vw', [], 0.83) ?></figure>
+      <figure data-reveal="img"><?= img('hi5', '(min-width: 900px) 44vw, 100vw', [], 0.83) ?></figure>
       <span class="corp__tag">Designed around your team</span>
     </div>
   </div>

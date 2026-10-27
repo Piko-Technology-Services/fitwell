@@ -14,7 +14,7 @@ return [
     'class-aerobics' => ['src' => 'unsplash:1635863807845-add1be925a2f', 'alt' => 'A smiling woman holding two orange kettlebells overhead', 'credit' => 'April Laugh / Unsplash'],
     'class-dance'    => ['src' => '../new-images/men leg up.png', 'alt' => 'A woman dancing with energy in a city alleyway', 'credit' => 'Rio Watkins / Unsplash'],
     'class-group'    => ['src' => '../new-images/black lady leg ball.jpeg', 'alt' => 'Four women in colourful workout sets standing together', 'credit' => 'April Laugh / Unsplash'],
-    'class-lowimpact'=> ['src' => 'unsplash:1683111124427-650aff5592a8', 'alt' => 'Three people stretching together outdoors before a workout', 'credit' => 'Sweet Life / Unsplash'],
+    'hi5'=> ['src' => '../new-images/hi-5.jpeg', 'alt' => 'Three people stretching together outdoors before a workout', 'credit' => 'Sweet Life / Unsplash'],
     'class-special'  => ['src' => 'unsplash:1771402900038-785d2b4c39b0', 'alt' => 'A cheerful group of people at a fitness event', 'credit' => 'Ben Iwara / Unsplash'],
     'corporate-outdoor' => ['src' => '../new-images/energy dance.png', 'alt' => 'Team sessions'],
     'coach'       => ['src' => '../new-images/green shirt.jpeg', 'alt' => 'Fitwell instructors'],
