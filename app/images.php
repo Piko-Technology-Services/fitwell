@@ -16,6 +16,9 @@ return [
     'class-group'    => ['src' => 'unsplash:1635863909116-5427cb7da155', 'alt' => 'Four women in colourful workout sets standing together', 'credit' => 'April Laugh / Unsplash'],
     'class-lowimpact'=> ['src' => 'unsplash:1683111124427-650aff5592a8', 'alt' => 'Three people stretching together outdoors before a workout', 'credit' => 'Sweet Life / Unsplash'],
     'class-special'  => ['src' => 'unsplash:1771402900038-785d2b4c39b0', 'alt' => 'A cheerful group of people at a fitness event', 'credit' => 'Ben Iwara / Unsplash'],
-    'corporate-outdoor' => ['src' => '../new-images/group.jpeg', 'alt' => 'Team sessions'],
+    'corporate-outdoor' => ['src' => '../new-images/men leg up.jpeg', 'alt' => 'Team sessions'],
     'coach'       => ['src' => '../new-images/green shirt.jpeg', 'alt' => 'Fitwell instructors'],
+
+
+    
 ];
