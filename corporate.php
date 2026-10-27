@@ -57,7 +57,7 @@ require APP_DIR . '/partials/header.php';
     </div>
     <div class="class-list" style="gap:clamp(48px,6vw,96px)">
       <article class="class-row">
-        <div class="class-row__media" data-reveal="img"><?= img('corporate-outdoor', '(min-width: 860px) 52vw, 100vw', [], 1.25) ?><span class="class-row__index">01 / Team sessions</span></div>
+        <div class="class-row__media" data-reveal="img"><?= img('highfive', '(min-width: 860px) 52vw, 100vw', [], 1.25) ?><span class="class-row__index">01 / Team sessions</span></div>
         <div class="class-row__body" data-reveal>
           <h3 class="h2">Group fitness for teams</h3>
           <p>Energising aerobics and group workouts for your colleagues — a regular weekly slot or a one-off session to kick off a new quarter.</p>
@@ -65,7 +65,7 @@ require APP_DIR . '/partials/header.php';
         </div>
       </article>
       <article class="class-row">
-        <div class="class-row__media" data-reveal="img"><?= img('corporate-outdoor', '(min-width: 860px) 52vw, 100vw', [], 1.25) ?><span class="class-row__index">02 / Wellness events</span></div>
+        <div class="class-row__media" data-reveal="img"><?= img('kneeling', '(min-width: 860px) 52vw, 100vw', [], 1.25) ?><span class="class-row__index">02 / Wellness events</span></div>
         <div class="class-row__body" data-reveal>
           <h3 class="h2">Wellness days &amp; team events</h3>
           <p>Make your next team day memorable with a high-energy dance fitness or group session that gets everyone moving and laughing together.</p>
@@ -73,7 +73,7 @@ require APP_DIR . '/partials/header.php';
         </div>
       </article>
       <article class="class-row">
-        <div class="class-row__media" data-reveal="img"><?= img('corporate-outdoor', '(min-width: 860px) 52vw, 100vw', [], 1.25) ?><span class="class-row__index">03 / Ongoing programmes</span></div>
+        <div class="class-row__media" data-reveal="img"><?= img('class-dance', '(min-width: 860px) 52vw, 100vw', [], 1.25) ?><span class="class-row__index">03 / Ongoing programmes</span></div>
         <div class="class-row__body" data-reveal>
           <h3 class="h2">Ongoing wellbeing programmes</h3>
           <p>Build consistency with a recurring programme that helps your people make movement a lasting habit — planned together with your HR or people team.</p>
