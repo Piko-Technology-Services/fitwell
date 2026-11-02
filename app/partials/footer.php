@@ -7,7 +7,7 @@
       <div class="site-footer__brand">
         <img src="<?= asset('img/logo-horizontal.png') ?>" alt="Fitwell Studio Limited" width="220" height="50" loading="lazy">
         <p class="site-footer__statement">Energising aerobics and group fitness for everyone — and wellbeing programmes that bring teams together.</p>
-        <p class="site-footer__slogan">Move Together. <span>Live Better.</span></p>
+        <p class="site-footer__slogan">Together <span>for a Better You.</span></p>
       </div>
 
       <div class="site-footer__cols">

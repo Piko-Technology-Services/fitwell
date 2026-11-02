@@ -1,6 +1,6 @@
 # FITWELL STUDIO LIMITED — website
 
-*Move Together. Live Better.*
+*Together for a Better You.*
 
 This is a PHP and MySQL site that runs directly from XAMPP. It needs no Composer, no build step and no framework.
 

@@ -17,7 +17,7 @@ require APP_DIR . '/partials/header.php';
   <div class="container hero__inner">
     <div class="hero-anim">
       <p class="eyebrow">Aerobics · Group Fitness · Corporate Wellness</p>
-      <h1 class="display hero__title" id="hero-title"><span>Move better.</span><span class="accent">Live better.</span></h1>
+      <h1 class="display hero__title" id="hero-title"><span>Together</span><span class="accent">for a Better You.</span></h1>
       <p class="hero__sub">Find your rhythm. Build your strength. Discover your community.</p>
       <p class="hero__text">Experience energising aerobics and group fitness sessions designed to bring people together through movement, consistency and wellbeing.</p>
       <div class="btn-row">
@@ -51,7 +51,7 @@ require APP_DIR . '/partials/header.php';
   <div class="ticker__track">
     <?php for ($g = 0; $g < 2; $g++): ?>
       <div class="ticker__group">
-        <?php foreach (['Aerobics', 'Dance Fitness', 'Group Fitness', 'Corporate Wellness', 'Move Together', 'Live Better'] as $word): ?>
+        <?php foreach (['Aerobics', 'Dance Fitness', 'Group Fitness', 'Corporate Wellness', 'Together for a Better You'] as $word): ?>
           <span class="ticker__item"><?= e($word) ?><span class="ticker__dot"></span></span>
         <?php endforeach; ?>
       </div>
@@ -74,7 +74,7 @@ require APP_DIR . '/partials/header.php';
         <figure data-reveal="img"><?= img('kneeling', '(min-width: 900px) 26vw, 55vw', [], 0.75, 1200) ?></figure>
         <figure data-reveal="img" style="--d:.15s"><?= img('pair', '(min-width: 900px) 22vw, 45vw', [], 0.71, 1200) ?></figure>
         <div class="intro__badge" aria-hidden="true">
-          <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text font-family="Montserrat" font-weight="700" font-size="10.5" letter-spacing="3.2" fill="#201C26"><textPath href="#circ">MOVE TOGETHER · LIVE BETTER · </textPath></text></svg>
+          <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text font-family="Montserrat" font-weight="700" font-size="10.5" letter-spacing="3.2" fill="#201C26"><textPath href="#circ">TOGETHER FOR A BETTER YOU · </textPath></text></svg>
           <img src="<?= asset('img/logo-mark.png') ?>" alt="" width="44" height="44" style="width:44px;height:auto">
         </div>
       </div>

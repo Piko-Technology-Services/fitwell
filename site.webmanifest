@@ -1,7 +1,7 @@
 {
   "name": "Fitwell Studio",
   "short_name": "Fitwell",
-  "description": "Aerobics, group fitness and corporate wellness. Move Together. Live Better.",
+  "description": "Aerobics, group fitness and corporate wellness. Together for a Better You.",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#FAF9FC",

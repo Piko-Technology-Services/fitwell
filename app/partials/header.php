@@ -32,7 +32,7 @@ $flashes = take_flashes();
   }
   $canonicalUrl = abs_url(url($canonical));
   $ogImage = $ogImage ?? share_image();
-  $ogImageAlt = $ogImageAlt ?? 'Fitwell Studio — Move Together. Live Better.';
+  $ogImageAlt = $ogImageAlt ?? 'Fitwell Studio — Together for a Better You.';
   $noindex = !empty($noindex) || strpos(str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? ''), '/admin/') !== false;
 ?>
 <title><?= e($fullTitle) ?></title>
@@ -123,7 +123,7 @@ $flashes = take_flashes();
       <a class="btn btn--ghost btn--block" href="<?= url('login.php') ?>">Member Login</a>
     <?php endif; ?>
     <?php if (whatsapp_url()): ?><a class="btn btn--whatsapp btn--block" href="<?= e(whatsapp_url()) ?>" target="_blank" rel="noopener"><?= whatsapp_icon() ?> Chat on WhatsApp</a><?php endif; ?>
-    <p class="mobile-menu__slogan">Move Together. Live Better.</p>
+    <p class="mobile-menu__slogan">Together for a Better You.</p>
   </div>
 </div>
 

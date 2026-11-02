@@ -13,7 +13,7 @@ require APP_DIR . '/partials/header.php';
     <div class="page-hero__grid">
       <div class="hero-anim">
         <p class="eyebrow">About Fitwell</p>
-        <h1 class="h1">Move together.<br><span class="accent">Live better.</span></h1>
+        <h1 class="h1">Together<br><span class="accent">for a Better You.</span></h1>
       </div>
       <p class="lead hero-anim">Fitwell Studio exists for one simple reason: people feel better when they move — and even better when they move together.</p>
     </div>

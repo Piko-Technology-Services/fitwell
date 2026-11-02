@@ -29,7 +29,7 @@ return [
     'seo' => [
         'site_name'   => 'Fitwell Studio',
         'locale'      => 'en_GB',
-        'default_description' => 'Fitwell Studio — energising aerobics, dance fitness and group classes for every level, plus corporate wellness for teams. Book your first class online. Move Together. Live Better.',
+        'default_description' => 'Fitwell Studio — energising aerobics, dance fitness and group classes for every level, plus corporate wellness for teams. Book your first class online. Together for a Better You.',
         'twitter'     => null,  // e.g. '@fitwellstudio'
     ],
 
@@ -43,7 +43,7 @@ return [
     'company' => [
         'legal_name' => 'FITWELL STUDIO LIMITED',
         'short_name' => 'Fitwell',
-        'slogan'     => 'Move Together. Live Better.',
+        'slogan'     => 'Together for a Better You.',
         'email'      => null,   // e.g. 'hello@yourdomain.com'
         'phone'      => null,   // e.g. '+260 ...'
         'address'    => null,   // studio street address
