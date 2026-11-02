@@ -17,7 +17,7 @@ return [
     'hi5'=> ['src' => '../new-images/hi-5.jpg', 'alt' => 'Three people stretching together outdoors before a workout', 'credit' => 'Sweet Life / Unsplash'],
     'class-special'  => ['src' => 'unsplash:1771402900038-785d2b4c39b0', 'alt' => 'A cheerful group of people at a fitness event', 'credit' => 'Ben Iwara / Unsplash'],
     'corporate-outdoor' => ['src' => '../new-images/energy dance.jpg', 'alt' => 'Team sessions'],
-    'coach'       => ['src' => '../new-images/green shirt.jpeg', 'alt' => 'Fitwell instructors'],
+    'coach'       => ['src' => '../new-images/print-leg.jpg', 'alt' => 'Fitwell instructors'],
 
 
     
