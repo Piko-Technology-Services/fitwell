@@ -23,7 +23,7 @@ require APP_DIR . '/partials/header.php';
     <h2>Membership</h2>
     <p>Membership options, prices and payment terms are confirmed by the studio.</p>
     <h2>Contact</h2>
-    <p>Questions about these terms? Contact us at <?= info('company.email', 'Email address') ?>.</p>
+    <p>Questions about these terms? Contact us at <a href="mailto:<?= e(cfg('company.email')) ?>"><?= e(cfg('company.email')) ?></a>.</p>
   </div>
 </section>
 <?php require APP_DIR . '/partials/footer.php'; ?>

@@ -43,9 +43,8 @@
           <ul class="site-footer__contact">
             <?php if (whatsapp_url()): ?><li><?= whatsapp_icon('icon') ?><span><a href="<?= e(whatsapp_url()) ?>" target="_blank" rel="noopener">WhatsApp <?= e(cfg('company.whatsapp_display', cfg('company.whatsapp'))) ?></a></span></li><?php endif; ?>
             <?php if (cfg('company.address')): ?><li><?= icon('pin') ?><span><?= e(cfg('company.address')) ?></span></li><?php endif; ?>
-            <li><?= icon('phone') ?><span><?= info('company.phone', 'Phone number') ?></span></li>
-            <li><?= icon('mail') ?><span><?php if (cfg('company.email')): ?><a href="mailto:<?= e(cfg('company.email')) ?>"><?= e(cfg('company.email')) ?></a><?php else: ?><?= placeholder('Email address') ?><?php endif; ?></span></li>
-            <li><?= icon('clock') ?><span><?= info('company.hours', 'Opening hours') ?></span></li>
+            <?php if (cfg('company.phone')): ?><li><?= icon('phone') ?><span><a href="tel:<?= e(preg_replace('/[^\d+]/', '', cfg('company.phone'))) ?>"><?= e(cfg('company.phone')) ?></a></span></li><?php endif; ?>
+            <?php if (cfg('company.email')): ?><li><?= icon('mail') ?><span><a href="mailto:<?= e(cfg('company.email')) ?>"><?= e(cfg('company.email')) ?></a></span></li><?php endif; ?>
           </ul>
         </div>
       </div>

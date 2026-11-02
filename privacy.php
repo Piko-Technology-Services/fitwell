@@ -26,7 +26,7 @@ require APP_DIR . '/partials/header.php';
     <h2>Sharing</h2>
     <p>We do not sell your personal information. Studio staff can see booking lists for the sessions they run.</p>
     <h2>Your choices</h2>
-    <p>You can ask us to update or delete your account information by contacting us at <?= info('company.email', 'Email address') ?>.</p>
+    <p>You can ask us to update or delete your account information by contacting us at <a href="mailto:<?= e(cfg('company.email')) ?>"><?= e(cfg('company.email')) ?></a>.</p>
     <h2>Contact</h2>
     <p>FITWELL STUDIO LIMITED<?= cfg('company.address') ? ' · ' . e(cfg('company.address')) : '' ?></p>
   </div>

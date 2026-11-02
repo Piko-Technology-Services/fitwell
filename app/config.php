@@ -44,11 +44,11 @@ return [
         'legal_name' => 'FITWELL STUDIO LIMITED',
         'short_name' => 'Fitwell',
         'slogan'     => 'Together for a Better You.',
-        'email'      => null,   // e.g. 'hello@yourdomain.com'
-        'phone'      => null,   // e.g. '+260 ...'
+        'email'      => 'admin@fitwellstudiozm.com',
+        'phone'      => '+260 766 545 627',   // same as WhatsApp
         'address'    => null,   // studio street address
-        'hours'      => null,   // e.g. 'Mon–Fri 05:30–20:00 · Sat 07:00–12:00'
-        'corporate_email' => null, // optional dedicated corporate enquiries address
+        'hours'      => null,   // not shown on the site while empty
+        'corporate_email' => null, // empty = corporate enquiries go to 'email' above
         'whatsapp'   => '+260766545627',            // WhatsApp chat number (international format)
         'whatsapp_display' => '+260 766 545 627',
         'whatsapp_message' => "Hi Fitwell Studio. I am interested in having more information about the programme, lessons, schedule, and the place. Can I have more information please?",
