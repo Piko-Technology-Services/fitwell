@@ -119,7 +119,7 @@ require APP_DIR . '/partials/header.php';
         <?php else: ?>
           <div class="contact-line"><?= icon('phone') ?><span><?= placeholder('Phone number') ?></span></div>
         <?php endif; ?>
-        <div class="contact-line"><?= icon('pin') ?><span><?= info('company.address', 'Studio address') ?></span></div>
+        <?php if (cfg('company.address')): ?><div class="contact-line"><?= icon('pin') ?><span><?= e(cfg('company.address')) ?></span></div><?php endif; ?>
       </div>
     </div>
   </div>

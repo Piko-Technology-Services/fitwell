@@ -42,7 +42,7 @@
           <h2 class="site-footer__title">Contact</h2>
           <ul class="site-footer__contact">
             <?php if (whatsapp_url()): ?><li><?= whatsapp_icon('icon') ?><span><a href="<?= e(whatsapp_url()) ?>" target="_blank" rel="noopener">WhatsApp <?= e(cfg('company.whatsapp_display', cfg('company.whatsapp'))) ?></a></span></li><?php endif; ?>
-            <li><?= icon('pin') ?><span><?= info('company.address', 'Studio address') ?></span></li>
+            <?php if (cfg('company.address')): ?><li><?= icon('pin') ?><span><?= e(cfg('company.address')) ?></span></li><?php endif; ?>
             <li><?= icon('phone') ?><span><?= info('company.phone', 'Phone number') ?></span></li>
             <li><?= icon('mail') ?><span><?php if (cfg('company.email')): ?><a href="mailto:<?= e(cfg('company.email')) ?>"><?= e(cfg('company.email')) ?></a><?php else: ?><?= placeholder('Email address') ?><?php endif; ?></span></li>
             <li><?= icon('clock') ?><span><?= info('company.hours', 'Opening hours') ?></span></li>
@@ -52,13 +52,14 @@
     </div>
 
     <div class="site-footer__bottom">
+      <?php $socials = array_filter(cfg('social', [])); ?>
+      <?php if ($socials): ?>
       <ul class="social" aria-label="Social media">
-        <?php $anySocial = false; foreach (cfg('social', []) as $name => $link): if ($link): $anySocial = true; ?>
+        <?php foreach ($socials as $name => $link): ?>
           <li><a href="<?= e($link) ?>" rel="noopener" target="_blank"><?= e($name) ?></a></li>
-        <?php endif; endforeach; if (!$anySocial): ?>
-          <li><?= placeholder('Social media links') ?></li>
-        <?php endif; ?>
+        <?php endforeach; ?>
       </ul>
+      <?php else: ?><span></span><?php endif; ?>
       <ul class="legal">
         <li><a href="<?= url('privacy.php') ?>">Privacy Policy</a></li>
         <li><a href="<?= url('terms.php') ?>">Terms &amp; Conditions</a></li>

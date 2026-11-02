@@ -51,7 +51,7 @@ return [
         'corporate_email' => null, // optional dedicated corporate enquiries address
         'whatsapp'   => '+260766545627',            // WhatsApp chat number (international format)
         'whatsapp_display' => '+260 766 545 627',
-        'whatsapp_message' => "Hi Fitwell! I'd like to know more about your classes.",
+        'whatsapp_message' => "Hi Fitwell Studio. I am interested in having more information about the programme, lessons, schedule, and the place. Can I have more information please?",
     ],
 
     /* Social links — leave null to hide or mark as placeholder */
@@ -66,12 +66,12 @@ return [
      * Prices are null until approved — the site shows "Pricing to be confirmed".
      * Edit names, notes and benefits to match the real packages.
      */
-    'currency_prefix' => '',   // e.g. 'K ' or '$' — shown before prices once they are set
+    'currency_prefix' => 'K',  // Zambian Kwacha — shown before prices (e.g. K600)
     'memberships' => [
         [
             'name'     => 'Drop-In',
             'tagline'  => 'Try a class, no commitment.',
-            'price'    => null,
+            'price'    => '100',
             'period'   => 'per class',
             'featured' => false,
             'benefits' => [
@@ -83,7 +83,7 @@ return [
         [
             'name'     => 'Monthly Membership',
             'tagline'  => 'For people ready to build a rhythm.',
-            'price'    => null,
+            'price'    => '600',
             'period'   => 'per month',
             'featured' => true,
             'benefits' => [

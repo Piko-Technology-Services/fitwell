@@ -28,7 +28,7 @@ require APP_DIR . '/partials/header.php';
     <h2>Your choices</h2>
     <p>You can ask us to update or delete your account information by contacting us at <?= info('company.email', 'Email address') ?>.</p>
     <h2>Contact</h2>
-    <p>FITWELL STUDIO LIMITED · <?= info('company.address', 'Registered address') ?></p>
+    <p>FITWELL STUDIO LIMITED<?= cfg('company.address') ? ' · ' . e(cfg('company.address')) : '' ?></p>
   </div>
 </section>
 <?php require APP_DIR . '/partials/footer.php'; ?>
