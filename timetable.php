@@ -24,7 +24,7 @@ require APP_DIR . '/partials/header.php';
   <div class="container page-hero__grid">
     <div class="hero-anim">
       <p class="eyebrow">Timetable</p>
-      <h1 class="h1">Pick a time.<br><span class="accent">Show up. Shine.</span></h1>
+      <h1 class="h1">Pick a time.<br><span class="accent">Show up. Have a Good Time.</span></h1>
     </div>
     <div class="hero-anim">
       <p class="lead">Reserve your spot in seconds. Bookings can be cancelled up to <?= (int) cfg('cancel_cutoff_hours', 2) ?> hours before class<?= current_user() ? '' : ' — just log in or create a free account to book' ?>.</p>

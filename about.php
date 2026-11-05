@@ -50,7 +50,7 @@ require APP_DIR . '/partials/header.php';
     </div>
     <div class="values">
       <div class="value" data-reveal><?= icon('heart') ?><h3>Everyone belongs</h3><p>All ages, shapes and fitness levels. No judgement, just encouragement.</p></div>
-      <div class="value" data-reveal style="--d:.06s"><?= icon('sun') ?><h3>Energy is contagious</h3><p>Great music, great coaching and a room full of people lifting each other up.</p></div>
+      <div class="value" data-reveal style="--d:.06s"><?= icon('sun') ?><h3>Come as you are</h3><p>Bad day, low energy, first time? Perfect. Just show up as you are.</p></div>
       <div class="value" data-reveal style="--d:.12s"><?= icon('calendar') ?><h3>Consistency over perfection</h3><p>Small, regular steps create lasting change. We celebrate showing up.</p></div>
       <div class="value" data-reveal style="--d:.18s"><?= icon('users') ?><h3>Stronger together</h3><p>Community turns a workout into something you look forward to.</p></div>
     </div>
