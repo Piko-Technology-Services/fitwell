@@ -1,8 +1,8 @@
 <?php
 require __DIR__ . '/app/bootstrap.php';
 
-$title = 'About Us';
-$description = 'The Fitwell Studio story: a welcoming aerobics and group fitness studio built on energy, inclusion and the power of moving together. Meet our values and community.';
+$title = 'About Fitwell Studio, Ndola';
+$description = 'The Fitwell Studio story: a welcoming aerobics and group fitness studio in Ndola, Zambia, built on energy, inclusion and the power of moving together.';
 $instructors = cfg('instructors', []);
 
 require APP_DIR . '/partials/header.php';
@@ -29,12 +29,11 @@ require APP_DIR . '/partials/header.php';
     <div data-reveal style="--d:.1s">
       <h2 class="h3">What if we just got started?</h2>
       <p>We often think that sport is not for everyone.</p>
-      <p class="lead" style="color:var(--text)"><em>Not at all! At Fitwell Studio, we want to welcome you in a warm and encouraging atmosphere. With our dynamic and fun classes, losing weight is a pleasure. We strive to be innovative, creative and ready to take you on board the Fitwell journey.</em></p>
+      <p class="lead" style="color:var(--text)">Not at all! At Fitwell Studio, we want to welcome you in a warm and encouraging atmosphere. With our dynamic and fun classes, losing weight is a pleasure. We strive to be innovative, creative and ready to take you on board the Fitwell journey.</p>
       <p>Our specialty is aerobics and group fitness, but also diverse and rhythmic workouts, with varied sessions tailored to your goals.</p>
       <p>Come and share enjoyable moments with us.</p>
       <p>Whether you are joining your very first class or coming back after a long break, you will find a community that wants to see you thrive.</p>
       <p>We also offer our services to companies, supporting organizations during their team buildings and other events, for healthier and more connected teams thanks to our corporate wellness programs.</p>
-      <p><em>Make the move, Embrace the Change.</em></p>
       <p>Come and join, your place is waiting for you.</p>
     </div>
   </div>

@@ -1,0 +1,10 @@
+# Server-only settings (database password) — never commit
+app/config.local.php
+
+# Local/test data
+storage/*.sqlite
+*.log
+
+# macOS / editor clutter
+.DS_Store
+.vscode/

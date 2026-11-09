@@ -1,8 +1,8 @@
 <?php
 require __DIR__ . '/app/bootstrap.php';
 
-$title = 'Aerobics & Group Fitness Classes';
-$description = 'Explore Fitwell Studio classes: high-energy aerobics, low-impact aerobics, dance cardio, group fitness and weekend specials. Beginner friendly — book your class online.';
+$title = 'Aerobics & Group Fitness Classes in Ndola';
+$description = 'Aerobics, dance fitness and group fitness classes in Ndola at Fitwell Studio. Beginner friendly, coached and social — see the classes and book online.';
 $canonical = 'classes.php';
 $classes = published_classes();
 $cats = cfg('categories', []);

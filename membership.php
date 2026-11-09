@@ -1,8 +1,8 @@
 <?php
 require __DIR__ . '/app/bootstrap.php';
 
-$title = 'Membership Options';
-$description = 'Join Fitwell Studio: drop-in classes, monthly membership and class packs for aerobics and group fitness. Create your free account and book online.';
+$title = 'Fitness Membership & Prices in Ndola';
+$description = 'Join Fitwell Studio in Ndola: drop-in aerobics and group fitness classes from K100, or a monthly membership for K600. Create your free account and book online.';
 $plans = cfg('memberships', []);
 
 // Comparison rows: label => which plans include it (by index)

@@ -253,6 +253,14 @@ function img(string $key, string $sizes = '100vw', array $attrs = [], ?float $ra
             $set[] = image_src($src, $w, $ratio ? (int) round($w / $ratio) : null) . ' ' . $w . 'w';
         }
         $html .= ' srcset="' . e(implode(', ', $set)) . '" sizes="' . e($sizes) . '"';
+    } elseif (preg_match('#^(.+)\.webp$#', $src, $m) && is_file(ROOT_DIR . '/' . $m[1] . '-800.webp') && is_file(ROOT_DIR . '/' . $src)) {
+        // Local photo with a phone-sized copy next to it
+        $size = @getimagesize(ROOT_DIR . '/' . $src);
+        $full = $size ? $size[0] : 1600;
+        $html .= ' srcset="' . e(url($m[1] . '-800.webp') . ' 800w, ' . url($src) . ' ' . $full . 'w') . '" sizes="' . e($sizes) . '"';
+        if ($size && !isset($attrs['width'])) {
+            $html .= ' width="' . $size[0] . '" height="' . $size[1] . '"';
+        }
     }
     if (!isset($attrs['loading'])) {
         $attrs['loading'] = 'lazy';

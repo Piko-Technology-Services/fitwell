@@ -1,8 +1,8 @@
 <?php
 require __DIR__ . '/app/bootstrap.php';
 
-$title = 'Timetable';
-$description = 'Fitwell Studio class timetable: see upcoming aerobics, dance cardio and group fitness sessions, check live availability and book your spot online.';
+$title = 'Class Timetable — Fitness Classes in Ndola';
+$description = 'Fitwell Studio timetable: upcoming aerobics, dance fitness and group fitness classes in Ndola. Check live availability and book your spot online.';
 $canonical = 'timetable.php';
 
 $maxWeeks = max(1, (int) ceil(cfg('booking_window_days', 28) / 7));

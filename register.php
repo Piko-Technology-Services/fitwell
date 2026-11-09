@@ -56,7 +56,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
 }
 
 $title = 'Join Fitwell';
-$description = 'Create your free Fitwell Studio account in under a minute and book aerobics, dance and group fitness classes online.';
+$description = 'Create your free Fitwell Studio account in under a minute and book aerobics, dance and group fitness classes in Ndola online.';
 require APP_DIR . '/partials/header.php';
 ?>
 <section class="auth">

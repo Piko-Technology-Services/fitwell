@@ -29,8 +29,12 @@ return [
     'seo' => [
         'site_name'   => 'Fitwell Studio',
         'locale'      => 'en_GB',
-        'default_description' => 'Fitwell Studio — energising aerobics, dance fitness and group classes for every level, plus corporate wellness for teams. Book your first class online. Together for a Better You.',
+        'default_description' => 'Fitwell Studio in Ndola, Zambia — energising aerobics, dance fitness and group classes for every level, plus corporate wellness for teams. Book your first class online. Together for a Better You.',
         'twitter'     => null,  // e.g. '@fitwellstudio'
+        // Paste the code from Google Search Console / Bing Webmaster Tools
+        // ("HTML tag" verification method) — just the content="..." value.
+        'google_verification' => null,
+        'bing_verification'    => null,
     ],
 
     /* ---------- Studio & booking rules ---------- */
@@ -46,7 +50,11 @@ return [
         'slogan'     => 'Together for a Better You.',
         'email'      => 'admin@fitwellstudiozm.com',
         'phone'      => '+260 766 545 627',   // same as WhatsApp
-        'address'    => null,   // studio street address
+        'address'    => null,   // studio street address (shown on the site and to Google when set)
+        'city'       => 'Ndola',
+        'region'     => 'Copperbelt Province',
+        'country'    => 'Zambia',
+        'country_code' => 'ZM',
         'hours'      => null,   // not shown on the site while empty
         'corporate_email' => null, // empty = corporate enquiries go to 'email' above
         'whatsapp'   => '+260766545627',            // WhatsApp chat number (international format)

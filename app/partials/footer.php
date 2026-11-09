@@ -6,7 +6,7 @@
     <div class="site-footer__top">
       <div class="site-footer__brand">
         <img src="<?= asset('img/logo-horizontal.png') ?>" alt="Fitwell Studio Limited" width="220" height="50" loading="lazy">
-        <p class="site-footer__statement">Energising aerobics and group fitness for everyone — and wellbeing programmes that bring teams together.</p>
+        <p class="site-footer__statement">Energising aerobics and group fitness for everyone in Ndola — and wellbeing programmes that bring teams together.</p>
         <p class="site-footer__slogan">Together <span>for a Better You.</span></p>
       </div>
 
@@ -42,7 +42,7 @@
           <h2 class="site-footer__title">Contact</h2>
           <ul class="site-footer__contact">
             <?php if (whatsapp_url()): ?><li><?= whatsapp_icon('icon') ?><span><a href="<?= e(whatsapp_url()) ?>" target="_blank" rel="noopener">WhatsApp <?= e(cfg('company.whatsapp_display', cfg('company.whatsapp'))) ?></a></span></li><?php endif; ?>
-            <?php if (cfg('company.address')): ?><li><?= icon('pin') ?><span><?= e(cfg('company.address')) ?></span></li><?php endif; ?>
+            <?php if (cfg('company.address') || cfg('company.city')): ?><li><?= icon('pin') ?><span><?= e(implode(', ', array_filter([cfg('company.address'), cfg('company.city'), cfg('company.country')]))) ?></span></li><?php endif; ?>
             <?php if (cfg('company.phone')): ?><li><?= icon('phone') ?><span><a href="tel:<?= e(preg_replace('/[^\d+]/', '', cfg('company.phone'))) ?>"><?= e(cfg('company.phone')) ?></a></span></li><?php endif; ?>
             <?php if (cfg('company.email')): ?><li><?= icon('mail') ?><span><a href="mailto:<?= e(cfg('company.email')) ?>"><?= e(cfg('company.email')) ?></a></span></li><?php endif; ?>
           </ul>

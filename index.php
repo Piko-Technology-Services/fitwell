@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/app/bootstrap.php';
 
-$title = 'Fitwell Studio — Aerobics, Group Fitness & Corporate Wellness';
+$title = 'Fitwell Studio Ndola — Aerobics, Group Fitness & Corporate Wellness';
 $canonical = '';
 $classes = published_classes();
 $next = next_session();
@@ -16,7 +16,7 @@ require APP_DIR . '/partials/header.php';
 <section class="hero" aria-labelledby="hero-title">
   <div class="container hero__inner">
     <div class="hero-anim">
-      <p class="eyebrow">Aerobics · Group Fitness · Corporate Wellness</p>
+      <p class="eyebrow">Aerobics · Group Fitness · Corporate Wellness · Ndola</p>
       <h1 class="display hero__title" id="hero-title"><span>Together</span><span class="accent">for a Better You.</span></h1>
       <p class="hero__sub">Find your rhythm. Build your strength. Discover your community.</p>
       <p class="hero__text">Experience energising aerobics and group fitness sessions designed to bring people together through movement, consistency and wellbeing.</p>

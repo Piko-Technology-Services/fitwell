@@ -137,8 +137,20 @@ function structured_data(string $canonical, string $title, array $extra = []): a
         if (cfg('company.email')) {
             $org['email'] = cfg('company.email');
         }
-        if (cfg('company.address')) {
-            $org['address'] = ['@type' => 'PostalAddress', 'streetAddress' => cfg('company.address')];
+        if (cfg('company.city')) {
+            $org['address'] = array_filter([
+                '@type' => 'PostalAddress',
+                'streetAddress'   => cfg('company.address'),
+                'addressLocality' => cfg('company.city'),
+                'addressRegion'   => cfg('company.region'),
+                'addressCountry'  => cfg('company.country_code', 'ZM'),
+            ]);
+            $org['areaServed'] = ['@type' => 'City', 'name' => cfg('company.city') . ', ' . cfg('company.country')];
+        }
+        $prices = array_filter(array_map(function ($p) { return is_numeric($p['price'] ?? null) ? (float) $p['price'] : null; }, cfg('memberships', [])), function ($v) { return $v !== null; });
+        if ($prices) {
+            $org['priceRange'] = cfg('currency_prefix', '') . min($prices) . '–' . cfg('currency_prefix', '') . max($prices);
+            $org['currenciesAccepted'] = 'ZMW';
         }
         $same = array_values(array_filter(cfg('social', [])));
         if ($same) {

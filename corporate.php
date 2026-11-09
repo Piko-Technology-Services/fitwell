@@ -1,9 +1,9 @@
 <?php
 require __DIR__ . '/app/bootstrap.php';
 
-$title = 'Corporate Wellness';
+$title = 'Corporate Wellness Programmes in Ndola';
 $bodyClass = 'has-dark-hero';
-$description = 'Corporate wellness programmes from Fitwell Studio: group fitness sessions, team wellness days and ongoing wellbeing programmes that build connection and an active workplace culture.';
+$description = 'Corporate wellness in Ndola from Fitwell Studio: group fitness sessions, team wellness days and ongoing wellbeing programmes that build team connection and an active workplace culture.';
 $email = cfg('company.corporate_email') ?: cfg('company.email');
 $mailto = $email ? 'mailto:' . $email . '?subject=' . rawurlencode('Corporate wellness enquiry') . '&body=' . rawurlencode("Hello Fitwell team,\n\nOrganisation:\nApproximate team size:\nWhat we're interested in:\nBest contact number:\n\nThank you") : null;
 

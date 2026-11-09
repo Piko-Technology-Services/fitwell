@@ -57,7 +57,7 @@ require APP_DIR . '/partials/header.php';
 ?>
 <section class="auth">
   <div class="auth__media">
-    <?= img('class-dance', '(min-width: 900px) 50vw, 100vw', ['loading' => 'eager', 'alt' => ''], null, 1600) ?>
+    <?= img('good-to-see-you', '(min-width: 900px) 50vw, 100vw', ['loading' => 'eager', 'alt' => ''], null, 1600) ?>
     <p class="auth__quote">Good to see<br>you <span>again.</span></p>
   </div>
   <div class="auth__form-wrap">

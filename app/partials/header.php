@@ -26,7 +26,7 @@ $flashes = take_flashes();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php
   $siteName = cfg('seo.site_name', 'Fitwell Studio');
-  $fullTitle = $title . (str_starts($title, 'Fitwell') ? '' : ' · ' . $siteName);
+  $fullTitle = $title . (stripos($title, 'Fitwell') !== false ? '' : ' · ' . $siteName);
   if (!isset($canonical)) {
       $canonical = $page === 'index.php' ? '' : $page;
   }
@@ -41,6 +41,10 @@ $flashes = take_flashes();
 <?php if (!$noindex): ?><link rel="canonical" href="<?= e($canonicalUrl) ?>"><?php endif; ?>
 <meta name="theme-color" content="#F36C21">
 <meta name="author" content="FITWELL STUDIO LIMITED">
+<?php if (cfg('seo.google_verification')): ?><meta name="google-site-verification" content="<?= e(cfg('seo.google_verification')) ?>"><?php endif; ?>
+<?php if (cfg('seo.bing_verification')): ?><meta name="msvalidate.01" content="<?= e(cfg('seo.bing_verification')) ?>"><?php endif; ?>
+<?php if (cfg('company.city')): ?><meta name="geo.placename" content="<?= e(cfg('company.city') . ', ' . cfg('company.country')) ?>">
+<meta name="geo.region" content="<?= e(cfg('company.country_code', 'ZM')) ?>"><?php endif; ?>
 
 <!-- Social sharing (WhatsApp, Facebook, LinkedIn, X) -->
 <meta property="og:type" content="<?= e($ogType ?? 'website') ?>">
