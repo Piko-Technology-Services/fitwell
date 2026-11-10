@@ -14,6 +14,7 @@ $compare = [
     'Welcome session with an instructor'  => [false, true, false],
 ];
 
+$structured = ld_memberships();
 require APP_DIR . '/partials/header.php';
 ?>
 

@@ -7,6 +7,7 @@ $description = 'Corporate wellness in Ndola from Fitwell Studio: group fitness s
 $email = cfg('company.corporate_email') ?: cfg('company.email');
 $mailto = $email ? 'mailto:' . $email . '?subject=' . rawurlencode('Corporate wellness enquiry') . '&body=' . rawurlencode("Hello Fitwell team,\n\nOrganisation:\nApproximate team size:\nWhat we're interested in:\nBest contact number:\n\nThank you") : null;
 
+$structured = ld_corporate_service();
 require APP_DIR . '/partials/header.php';
 ?>
 

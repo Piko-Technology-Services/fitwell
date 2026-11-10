@@ -122,7 +122,7 @@ function structured_data(string $canonical, string $title, array $extra = []): a
             'slogan'   => 'Together for a Better You.',
             'description' => cfg('seo.default_description'),
             'url'      => $home,
-            'logo'     => abs_url(asset('img/logo-mark.png')),
+            'logo'     => ['@type' => 'ImageObject', 'url' => abs_url(asset('img/logo-google.png')), 'width' => 512, 'height' => 512],
             'image'    => abs_url(asset('img/og-default.jpg')),
         ];
         if (cfg('company.whatsapp')) {
@@ -178,4 +178,146 @@ function structured_data(string $canonical, string $title, array $extra = []): a
         $blocks[] = ['@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => $items];
     }
     return array_merge($blocks, $extra);
+}
+
+
+/* ---------- Extra structured data (schema.org) ---------- */
+
+/** The studio as a place, for events and services. */
+function ld_place(): array
+{
+    return [
+        '@type' => 'Place',
+        'name' => 'Fitwell Studio',
+        'address' => array_filter([
+            '@type' => 'PostalAddress',
+            'streetAddress'   => cfg('company.address'),
+            'addressLocality' => cfg('company.city'),
+            'addressRegion'   => cfg('company.region'),
+            'addressCountry'  => cfg('company.country_code', 'ZM'),
+        ]),
+    ];
+}
+
+function ld_business_ref(): array
+{
+    return ['@type' => 'HealthClub', '@id' => abs_url(url('')) . '#business', 'name' => 'FITWELL STUDIO LIMITED', 'url' => abs_url(url(''))];
+}
+
+/** Price of a single class (the Drop-In plan), or null if not set. */
+function drop_in_price(): ?string
+{
+    foreach (cfg('memberships', []) as $p) {
+        if (stripos($p['name'] ?? '', 'drop') !== false && is_numeric($p['price'] ?? null)) {
+            return (string) $p['price'];
+        }
+    }
+    return null;
+}
+
+/** Upcoming class sessions as Events (Google can show these in event listings). */
+function ld_events(array $sessions, int $limit = 20): array
+{
+    $out = [];
+    $price = drop_in_price();
+    foreach (array_slice($sessions, 0, $limit) as $s) {
+        $start = strtotime($s['starts_at']);
+        $event = [
+            '@context' => 'https://schema.org',
+            '@type' => 'Event',
+            'name' => $s['class_name'] . ' — Fitwell Studio Ndola',
+            'description' => $s['class_name'] . ': a ' . (int) $s['duration_min'] . '-minute ' . strtolower(category_label($s['category'])) . ' class (' . strtolower($s['level'] ?: 'all levels') . ') at Fitwell Studio, Ndola.',
+            'startDate' => date('c', $start),
+            'endDate' => date('c', $start + (int) $s['duration_min'] * 60),
+            'eventStatus' => 'https://schema.org/EventScheduled',
+            'eventAttendanceMode' => 'https://schema.org/OfflineEventAttendanceMode',
+            'location' => ld_place(),
+            'organizer' => ld_business_ref(),
+            'image' => [share_image($s['image'] ?: null)],
+            'url' => abs_url(url('class.php?c=' . rawurlencode($s['class_slug']))),
+        ];
+        if ($price !== null) {
+            $event['offers'] = [
+                '@type' => 'Offer',
+                'price' => $price,
+                'priceCurrency' => 'ZMW',
+                'availability' => spots_left($s) > 0 ? 'https://schema.org/InStock' : 'https://schema.org/SoldOut',
+                'url' => abs_url(url('timetable.php')) . '#s-' . (int) $s['id'],
+                'validFrom' => date('c', strtotime($s['created_at'] ?? 'now')),
+            ];
+        }
+        if (!empty($s['instructor'])) {
+            $event['performer'] = ['@type' => 'Person', 'name' => $s['instructor']];
+        }
+        $out[] = $event;
+    }
+    return $out;
+}
+
+/** Membership options as a catalogue of priced offers. */
+function ld_memberships(): array
+{
+    $items = [];
+    foreach (cfg('memberships', []) as $p) {
+        if (!is_numeric($p['price'] ?? null)) {
+            continue;
+        }
+        $items[] = [
+            '@type' => 'Offer',
+            'name' => $p['name'],
+            'description' => trim(($p['tagline'] ?? '') . ' ' . implode('. ', $p['benefits'] ?? [])),
+            'price' => (string) $p['price'],
+            'priceCurrency' => 'ZMW',
+            'url' => abs_url(url('membership.php')),
+            'itemOffered' => ['@type' => 'Service', 'name' => $p['name'] . ' — ' . ($p['period'] ?? ''), 'provider' => ld_business_ref()],
+        ];
+    }
+    if (!$items) {
+        return [];
+    }
+    return [[
+        '@context' => 'https://schema.org',
+        '@type' => 'OfferCatalog',
+        'name' => 'Fitwell Studio membership options',
+        'url' => abs_url(url('membership.php')),
+        'itemListElement' => $items,
+    ]];
+}
+
+/** Corporate Wellness as a service offered in the city. */
+function ld_corporate_service(): array
+{
+    return [[
+        '@context' => 'https://schema.org',
+        '@type' => 'Service',
+        'name' => 'Corporate Wellness Programmes',
+        'serviceType' => 'Corporate wellness and group fitness for organisations',
+        'description' => 'Group fitness sessions, team wellness days and ongoing wellbeing programmes for organisations, designed around your team.',
+        'provider' => ld_business_ref(),
+        'areaServed' => ['@type' => 'City', 'name' => cfg('company.city', 'Ndola') . ', ' . cfg('company.country', 'Zambia')],
+        'url' => abs_url(url('corporate.php')),
+    ]];
+}
+
+/** Published classes as an ItemList. */
+function ld_class_list(array $classes): array
+{
+    if (!$classes) {
+        return [];
+    }
+    $items = [];
+    foreach (array_values($classes) as $i => $c) {
+        $items[] = [
+            '@type' => 'ListItem',
+            'position' => $i + 1,
+            'name' => $c['name'],
+            'url' => abs_url(url('class.php?c=' . rawurlencode($c['slug']))),
+        ];
+    }
+    return [[
+        '@context' => 'https://schema.org',
+        '@type' => 'ItemList',
+        'name' => 'Fitness classes at Fitwell Studio, Ndola',
+        'itemListElement' => $items,
+    ]];
 }

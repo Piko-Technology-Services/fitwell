@@ -12,6 +12,7 @@ foreach ($classes as $c) {
 }
 $activeCat = isset($_GET['category'], $counts[$_GET['category']]) ? $_GET['category'] : 'all';
 
+$structured = ld_class_list($classes);
 require APP_DIR . '/partials/header.php';
 ?>
 

@@ -65,9 +65,10 @@ $flashes = take_flashes();
 <meta name="twitter:image:alt" content="<?= e($ogImageAlt) ?>">
 <?php if (cfg('seo.twitter')): ?><meta name="twitter:site" content="<?= e(cfg('seo.twitter')) ?>"><?php endif; ?>
 
-<link rel="icon" type="image/png" sizes="192x192" href="<?= asset('img/favicon.png') ?>">
-<link rel="icon" type="image/png" sizes="32x32" href="<?= asset('img/favicon-32.png') ?>">
-<link rel="apple-touch-icon" href="<?= asset('img/apple-touch-icon.png') ?>">
+<link rel="icon" href="<?= url('favicon.ico') ?>" sizes="48x48">
+<link rel="icon" type="image/png" sizes="96x96" href="<?= asset('img/favicon-96.png') ?>">
+<link rel="icon" type="image/png" sizes="192x192" href="<?= asset('img/favicon-192.png') ?>">
+<link rel="apple-touch-icon" sizes="180x180" href="<?= asset('img/apple-touch-icon.png') ?>">
 <link rel="manifest" href="<?= url('site.webmanifest') ?>">
 <?php foreach (structured_data($canonical, $title, $structured ?? []) as $ld): ?>
 <script type="application/ld+json"><?= json_encode($ld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>

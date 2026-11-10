@@ -212,6 +212,9 @@ function share_image(?string $key = null): string
     if ($src && strpos($src, 'media:') === 0) {
         return abs_url(image_src($src, 0));
     }
+    if ($src && !preg_match('#^https?://#', $src) && is_file(ROOT_DIR . '/' . $src)) {
+        return abs_url(url($src));
+    }
     return abs_url(asset('img/og-default.jpg'));
 }
 

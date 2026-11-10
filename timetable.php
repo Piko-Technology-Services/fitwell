@@ -17,6 +17,7 @@ $return = 'timetable.php' . ($week ? '?w=' . $week : '');
 // Default to the first day that has classes (week view shows all if JS is off)
 $initial = $byDay ? array_key_first($byDay) : 'all';
 
+$structured = ld_events($sessions);
 require APP_DIR . '/partials/header.php';
 ?>
 

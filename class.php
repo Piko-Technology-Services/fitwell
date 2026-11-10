@@ -28,6 +28,7 @@ $byDay = group_by_day($sessions);
 $return = 'class.php?c=' . rawurlencode($class['slug']);
 $others = array_values(array_filter(published_classes(), function ($c) use ($class) { return $c['id'] !== $class['id']; }));
 
+$structured = ld_events($sessions);
 require APP_DIR . '/partials/header.php';
 ?>
 
