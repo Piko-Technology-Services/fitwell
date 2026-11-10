@@ -24,7 +24,7 @@ require APP_DIR . '/partials/header.php';
   <div class="container split">
     <div data-reveal>
       <p class="eyebrow">Our story</p>
-      <p class="statement">We started Fitwell to make fitness feel less like a chore and more like <em>the best part of your day.</em></p>
+      <p class="statement" style="color:#561E84">We started Fitwell to make fitness feel less like a chore and more like <em>the best part of your day.</em></p>
     </div>
     <div data-reveal style="--d:.1s">
       <h2 class="h3">What if we just got started?</h2>
@@ -34,7 +34,8 @@ require APP_DIR . '/partials/header.php';
       <p>Come and share enjoyable moments with us.</p>
       <p>Whether you are joining your very first class or coming back after a long break, you will find a community that wants to see you thrive.</p>
       <p>We also offer our services to companies, supporting organizations during their team buildings and other events, for healthier and more connected teams thanks to our corporate wellness programs.</p>
-      <p>Come and join, your place is waiting for you.</p>
+      <p>Make the move, Embrace the Change.</p>
+      <p>We are waiting for you.</p>
     </div>
   </div>
 </section>
