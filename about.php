@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/app/bootstrap.php';
 
-$title = 'About Fitwell Studio, Ndola';
+$title = 'About Fitwell Studio — Aerobics, Group Fitness & Corporate Wellness';
 $description = 'The Fitwell Studio story: a welcoming aerobics and group fitness studio in Ndola, Zambia, built on energy, inclusion and the power of moving together.';
 $instructors = cfg('instructors', []);
 

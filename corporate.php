@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/app/bootstrap.php';
 
-$title = 'Corporate Wellness Programmes in Ndola';
+$title = 'Corporate Wellness Programmes';
 $bodyClass = 'has-dark-hero';
 $description = 'Corporate wellness in Ndola from Fitwell Studio: group fitness sessions, team wellness days and ongoing wellbeing programmes that build team connection and an active workplace culture.';
 $email = cfg('company.corporate_email') ?: cfg('company.email');

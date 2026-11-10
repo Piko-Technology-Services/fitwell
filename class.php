@@ -17,7 +17,7 @@ if (!$class) {
     exit;
 }
 
-$title = $class['name'] . ' Class in Ndola';
+$title = $class['name'] . ' Class';
 $description = $class['summary'] . ' ' . (int) $class['duration_min'] . '-minute ' . strtolower(category_label($class['category'])) . ' class, ' . strtolower($class['level']) . '. Book online at Fitwell Studio, Ndola.';
 $canonical = 'class.php?c=' . rawurlencode($class['slug']);
 $ogImage = share_image($class['image'] ?: null);

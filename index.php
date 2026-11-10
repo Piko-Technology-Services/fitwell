@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/app/bootstrap.php';
 
-$title = 'Fitwell Studio Ndola — Aerobics, Group Fitness & Corporate Wellness';
+$title = 'Fitwell Studio — Aerobics, Group Fitness & Corporate Wellness';
 $canonical = '';
 $classes = published_classes();
 $next = next_session();

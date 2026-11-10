@@ -9,7 +9,7 @@ foreach (array_slice(preg_split('/\s+/', trim($user['name'])), 0, 2) as $part) {
     $initials .= mb_strtoupper(mb_substr($part, 0, 1));
 }
 
-$title = 'My Account';
+$title = 'My Fitwell Studio Account';
 $noindex = true;
 require APP_DIR . '/partials/header.php';
 ?>
