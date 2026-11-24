@@ -149,7 +149,7 @@ function structured_data(string $canonical, string $title, array $extra = []): a
         }
         $prices = array_filter(array_map(function ($p) { return is_numeric($p['price'] ?? null) ? (float) $p['price'] : null; }, cfg('memberships', [])), function ($v) { return $v !== null; });
         if ($prices) {
-            $org['priceRange'] = cfg('currency_prefix', '') . min($prices) . '–' . cfg('currency_prefix', '') . max($prices);
+            $org['priceRange'] = cfg('currency_prefix', '') . number_format(min($prices)) . '–' . cfg('currency_prefix', '') . number_format(max($prices));
             $org['currenciesAccepted'] = 'ZMW';
         }
         $same = array_values(array_filter(cfg('social', [])));
@@ -204,11 +204,11 @@ function ld_business_ref(): array
     return ['@type' => 'HealthClub', '@id' => abs_url(url('')) . '#business', 'name' => 'FITWELL STUDIO LIMITED', 'url' => abs_url(url(''))];
 }
 
-/** Price of a single class (the Drop-In plan), or null if not set. */
+/** Price of a single class (the Trial Session / Drop-In plan), or null if not set. */
 function drop_in_price(): ?string
 {
     foreach (cfg('memberships', []) as $p) {
-        if (stripos($p['name'] ?? '', 'drop') !== false && is_numeric($p['price'] ?? null)) {
+        if (preg_match('/trial|drop/i', $p['name'] ?? '') && is_numeric($p['price'] ?? null)) {
             return (string) $p['price'];
         }
     }

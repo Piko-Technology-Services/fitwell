@@ -557,7 +557,11 @@ body.menu-open { overflow: hidden; }
 .tt-day[hidden] { display: none; }
 
 /* ---------- 13. Membership ---------- */
-.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); align-items: stretch; }
+.plans { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2vw, 24px); align-items: stretch; }
+.plans .plan { padding: clamp(26px, 2.4vw, 36px); }
+.plans .price__period { display: block; margin-top: 6px; line-height: 1.4; }
+.plans .plan__list { align-content: start; }
+@media (max-width: 1240px) { .plans { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .plan {
   position: relative; display: flex; flex-direction: column;
   padding: clamp(30px, 3vw, 44px); border-radius: var(--r-lg);

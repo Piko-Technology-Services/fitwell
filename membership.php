@@ -2,16 +2,18 @@
 require __DIR__ . '/app/bootstrap.php';
 
 $title = 'Fitness Membership & Prices in Ndola';
-$description = 'Join Fitwell Studio in Ndola: drop-in aerobics and group fitness classes from K100, or a monthly membership for K600. Create your free account and book online.';
+$description = 'Fitwell Studio prices in Ndola: a K100 trial session, 12 group sessions (3 days a week) for K650, K1,200 with personal coaching, or 12 private sessions with your own coach for K1,500.';
 $plans = cfg('memberships', []);
 
-// Comparison rows: label => which plans include it (by index)
+// Comparison rows: one value per plan, in the same order as 'memberships' in app/config.php
+// (true = included, false = not included, text = shown as written)
 $compare = [
-    'Online booking & member account'   => [true, true, true],
-    'Access to scheduled group classes' => ['Single class', 'All month', 'Per pack'],
-    'Aerobics, dance & group fitness'   => [true, true, true],
-    'Priority access to special sessions' => [false, true, false],
-    'Welcome session with an instructor'  => [false, true, false],
+    'Group classes'                     => ['1 session', '12 sessions', '12 sessions', false],
+    'Training days'                     => [false, '3 days a week', '3 days a week', false],
+    'Personal coaching'                 => [false, false, '1 session', '12 private sessions'],
+    'Dedicated coach'                   => [false, false, false, true],
+    'Aerobics, dance & group fitness'   => [true, true, true, false],
+    'Member account'                    => [true, true, true, true],
 ];
 
 $structured = ld_memberships();

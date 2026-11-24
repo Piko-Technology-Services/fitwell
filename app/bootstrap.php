@@ -178,7 +178,8 @@ function whatsapp_icon(string $class = 'icon'): string
 function price_label(?array $plan): string
 {
     if ($plan && $plan['price'] !== null && $plan['price'] !== '') {
-        return '<span class="price__amount">' . e(cfg('currency_prefix', '') . $plan['price']) . '</span>';
+        $amount = is_numeric($plan['price']) ? number_format((float) $plan['price']) : $plan['price'];
+        return '<span class="price__amount">' . e(cfg('currency_prefix', '') . $amount) . '</span>';
     }
     return '<span class="price__amount price__amount--tbc">' . placeholder('Pricing') . '</span>';
 }

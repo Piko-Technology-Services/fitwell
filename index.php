@@ -152,7 +152,7 @@ require APP_DIR . '/partials/header.php';
       <div class="section-head__text" data-reveal>
         <p class="eyebrow">Membership</p>
         <h2 class="h2" id="plans-title">Your next chapter starts here.</h2>
-        <p class="lead">Simple options, no complicated rules. Start with one class or commit to a month of momentum.</p>
+        <p class="lead">Simple options, no complicated rules. Start with a trial session, train three days a week, or work one-to-one with a coach.</p>
       </div>
       <a class="link-arrow" href="<?= url('membership.php') ?>" data-reveal>Compare options <?= icon('arrow') ?></a>
     </div>
